@@ -15,7 +15,23 @@ pipeline {
           steps {
             script {
               // Verificar si ChromeDriver está en el directorio correcto
-              sh 'ls -l ${WORKSPACE}/chromedriver'  // Verifica que el archivo exista
+              sh 'ls -l "${WORKSPACE}/chromedriver"'  // Verifica que el archivo exista
+            }
+          }
+        }
+        stage('Verify find ChromeDriver') {
+          steps {
+            script {
+                // Usar find para buscar el chromedriver en el workspace de Jenkins
+               sh 'find ${WORKSPACE} -name chromedriver'
+              }
+            }
+        }
+        stage('Print Workspace Path') {
+          steps {
+            script {
+              // Imprimir el workspace para verificar que está correcto
+              echo "Workspace: ${WORKSPACE}"
             }
           }
         }
