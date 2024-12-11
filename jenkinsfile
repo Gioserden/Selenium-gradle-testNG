@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+
+    tools {
+        gradle 'Gradle-7.6' // Configura la versión de Gradle que usaste en Jenkins (instalada desde Administrar Jenkins > Herramientas Globales).
+    }
+
+    environment {
+        // Variables de entorno necesarias para el proyecto
+        CHROME_DRIVER = './chromedriver' // Cambia según el path del ChromeDriver en tu proyecto
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Clona el código del repositorio
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Limpia y construye el proyecto usando Gradle
+                sh './gradlew clean build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Ejecuta las pruebas automatizadas
+                sh './gradlew test'
+            }
+            post {
+                always {
+                    // Archiva los resultados de las pruebas
+                    junit 'build/test-results/test/*.xml'
+                    archiveArtifacts artifacts: 'build/reports/tests/test/**', allowEmptyArchive: true
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Limpia el workspace después del build
+            cleanWs()
+        }
+    }
+}
