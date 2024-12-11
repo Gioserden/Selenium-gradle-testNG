@@ -15,7 +15,7 @@ pipeline {
           steps {
             script {
                 // Usar find para buscar el chromedriver en el workspace de Jenkins
-               sh 'find ${WORKSPACE} -name chromedriver'
+               sh 'find "${WORKSPACE}" -name chromedriver'
               }
             }
         }
