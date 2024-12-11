@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        gradle 'Gradle-7.6' // Configura la versión de Gradle que usaste en Jenkins (instalada desde Administrar Jenkins > Herramientas Globales).
+        gradle 'Gradle-8.11.1' // Configura la versión de Gradle que usaste en Jenkins (instalada desde Administrar Jenkins > Herramientas Globales).
     }
 
     environment {
