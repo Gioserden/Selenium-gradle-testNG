@@ -26,3 +26,11 @@
 2024-12-10 16:41:38 [Test worker] INFO  com.automation.tests.LoginTest - Prueba finalizada exitosamente
 2024-12-10 16:41:40 [Test worker] INFO  com.automation.tests.LoginTest - Página cargada: https://www.saucedemo.com/
 2024-12-10 16:41:41 [Test worker] INFO  com.automation.tests.LoginTest - Prueba finalizada exitosamente
+2024-12-11 17:34:38 [Test worker] INFO  com.automation.tests.LoginTest - Página cargada: https://www.saucedemo.com/
+2024-12-11 17:34:39 [Test worker] INFO  com.automation.tests.LoginTest - Prueba finalizada exitosamente
+2024-12-11 17:34:42 [Test worker] INFO  com.automation.tests.LoginTest - Página cargada: https://www.saucedemo.com/
+2024-12-11 17:34:42 [Test worker] INFO  com.automation.tests.LoginTest - Se hizo clic en el botón de login
+2024-12-11 17:34:42 [Test worker] INFO  com.automation.tests.LoginTest - URL actual: https://www.saucedemo.com/inventory.html
+2024-12-11 17:34:42 [Test worker] INFO  com.automation.tests.LoginTest - Prueba finalizada exitosamente
+2024-12-11 17:34:45 [Test worker] INFO  com.automation.tests.LoginTest - Página cargada: https://www.saucedemo.com/
+2024-12-11 17:34:45 [Test worker] INFO  com.automation.tests.LoginTest - Prueba finalizada exitosamente
