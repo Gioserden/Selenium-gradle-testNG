@@ -11,14 +11,6 @@ pipeline {
     }
 
     stages {
-        stage('Verify ChromeDriver') {
-          steps {
-            script {
-              // Verificar si ChromeDriver está en el directorio correcto
-              sh 'ls -l "${WORKSPACE}/chromedriver"'  // Verifica que el archivo exista
-            }
-          }
-        }
         stage('Verify find ChromeDriver') {
           steps {
             script {
