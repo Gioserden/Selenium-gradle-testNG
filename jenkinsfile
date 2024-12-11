@@ -21,7 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Limpia y construye el proyecto usando Gradle
-                sh './gradlew clean build'
+                sh 'gradle clean build'
             }
         }
 
