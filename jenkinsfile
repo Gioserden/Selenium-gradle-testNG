@@ -11,6 +11,14 @@ pipeline {
     }
 
     stages {
+        stage('Verify ChromeDriver') {
+          steps {
+            script {
+              // Verificar si ChromeDriver está en el directorio correcto
+              sh 'ls -l ${WORKSPACE}/chromedriver'  // Verifica que el archivo exista
+            }
+          }
+        }
         stage('Checkout') {
             steps {
                 checkout scm // Clona el código del repositorio
