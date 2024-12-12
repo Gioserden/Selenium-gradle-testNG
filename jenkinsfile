@@ -5,11 +5,6 @@ pipeline {
         gradle 'Gradle-8.11.1' // Configura la versión de Gradle que usaste en Jenkins (instalada desde Administrar Jenkins > Herramientas Globales).
     }
 
-    environment {
-        // Usamos la ruta al ChromeDriver instalada en el contenedor Docker
-        CHROME_DRIVER = '/usr/local/bin/chromedriver' 
-    }
-
     stages {
         stage('Checkout') {
             steps {
